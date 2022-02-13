@@ -12,16 +12,27 @@ public class App {
 
     int deckChoice;
 
-    
+    Deck gameDeck = new Deck();
 
     public static void main(String[] args) throws Exception {
         App gwent = new App();
 
-        gwent.menu();
+        gwent.Menu();
+
+        gwent.Play();
+
+    }
+
+    public void Play() {
+
+        System.out.println("PLAYER 1 DECK:\n");
+        players[0].printDeck();
+        System.out.println("PLAYER 2 DECK:\n");
+        players[1].printDeck();
         
     }
 
-    public void menu(){
+    public void Menu(){
         String name;
 
         //cria o objeto do Scanner
@@ -35,6 +46,11 @@ public class App {
         System.out.println("Ira jogar com qual baralho?");
         System.out.println("[1] Nilfgaard deck \n [2] Monsters deck");
         deckChoice = scanner.nextInt();
+        players[0].selectDeckPlayer(gameDeck.selectDeck(deckChoice));
+
+        
+
+        scanner.nextLine();
 
         System.out.println("Digite o nome do segundo jogador:");
         name = scanner.nextLine();
@@ -44,11 +60,6 @@ public class App {
         System.out.println("Ira jogar com qual baralho?");
         System.out.println("[1] Nilfgaard deck \n [2] Monsters deck");
         deckChoice = scanner.nextInt();
-    }
-
-    public void DistributeDeck(){
-        Card distributeCard;
-
-
+        players[1].selectDeckPlayer(gameDeck.selectDeck(deckChoice));
     }
 }
