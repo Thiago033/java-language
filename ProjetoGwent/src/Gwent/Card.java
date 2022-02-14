@@ -1,6 +1,7 @@
 package Gwent;
 
 public class Card {
+    int code;
     String faction;
     String name;
     int strengh;
@@ -8,8 +9,8 @@ public class Card {
     String type;
 
 
-    public Card(String faction, String name, int strengh, String cardAbilities, String type) {
-
+    public Card(int code, String faction, String name, int strengh, String cardAbilities, String type) {
+        this.code = code;
         this.faction = faction;
         this.name = name;
         this.strengh = strengh;
@@ -20,7 +21,7 @@ public class Card {
     //print card status
     @Override
     public String toString() {
-        return faction+ " " +name+ " " +strengh+ " " +cardAbilities+ " " +type;
+        return code+ " " +faction+ " " +name+ " " +strengh+ " " +cardAbilities+ " " +type;
     }
 
     public void testCardAbilities(){

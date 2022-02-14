@@ -12,10 +12,10 @@ public class Deck {
         //readArchive();
 
         //--------------CRIANDO DECK MANUALMENTE-------------------
-        nilfgaardDeck.add(new Card("nilfgaard", "teste1", 1, "none", "hero"));
-        nilfgaardDeck.add(new Card("nilfgaard", "teste2", 2, "none", "normal"));
-        monstersDeck.add(new Card("monsters", "teste3", 3, "none", "hero"));
-        monstersDeck.add(new Card("monsters", "teste4", 4, "none", "normal"));
+        nilfgaardDeck.add(new Card(1, "nilfgaard", "teste1", 10 , "none", "hero"));
+        nilfgaardDeck.add(new Card(2, "nilfgaard", "teste2", 5, "none", "normal"));
+        monstersDeck.add(new Card(3, "monsters", "teste3", 10, "none", "hero"));
+        monstersDeck.add(new Card(4, "monsters", "teste4", 5, "none", "normal"));
         //---------------------------------------------------------
     }
 

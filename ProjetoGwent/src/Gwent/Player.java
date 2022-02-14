@@ -26,6 +26,10 @@ public class Player {
     }
     */
 
+    public Card selectCard(int cardCode){
+        return playersDeck.get(cardCode);
+    }
+
     public void selectDeckPlayer(ArrayList<Card> selectedDeck){
         playersDeck.addAll(selectedDeck);
     }
