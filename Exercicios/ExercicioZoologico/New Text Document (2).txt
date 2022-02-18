@@ -1,0 +1,14 @@
+
+public AnimalOrcamento[] animaisVacinados(AnimalOrcamento[] animais) {
+
+  int i, j = 0;
+
+  AnimalOrcamento[] vacinados = new AnimalOrcamento[animais.length];
+
+  for (i = 0; i < animais.length; i++){
+    if (animais[i].orcamentoGastosAnimal().encontraItem(“vacina W”) != null)
+	vacinados[j++] = animais[i];
+  }
+
+  return vacinados;
+}
