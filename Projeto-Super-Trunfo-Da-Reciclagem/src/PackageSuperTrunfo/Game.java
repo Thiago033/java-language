@@ -10,7 +10,6 @@ import java.util.Scanner;
  * @author thiag
  */
 public class Game {
-    
     //Cria vetor com os jogadores
     private static Jogador[] jogadores = new Jogador[2];
 
@@ -33,13 +32,12 @@ public class Game {
         //Metodo principal do jogo
         superTrunfo.jogar();
     }
-    
+
     //Limpa o console
     public void limparConsole() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
-
     public void menuJogadores() {
         String nome;
 
@@ -121,7 +119,6 @@ public class Game {
         }
                     
         while(game == true){
-
             //jogador1 e jogador2 recebem a primeira carta do baralho de cada um
             //as 2 cartas sao excluidas dos baralhos dos 2 jogadores
             jogador1 = jogadores[0].excluir();
